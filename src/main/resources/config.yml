@@ -1,0 +1,61 @@
+# ======================================
+# Configuration d'EnferChat
+# ======================================
+# Codes couleur supportés :
+#   Hex    : &#RRGGBB  (ex. &#FFB300)
+#   Bukkit : &a, &c, &l, &r, etc.
+
+formats:
+
+  # ──────────────────────────────────────
+  # Format du chat
+  # Placeholders : {level}, {name}, {message}
+  # ──────────────────────────────────────
+  chat: "&#606060[&#FFB300{level}&#606060] &#FFFFFF{name} &#606060: &#FFFFFF{message}"
+
+  # Autoriser les codes couleur (&x) dans les messages des joueurs
+  allow-chat-colors: false
+
+  # ──────────────────────────────────────
+  # Message de mort personnalisé
+  # Placeholders : {player}, {level}
+  # Mettre 'default' pour conserver le message Minecraft par défaut
+  # ──────────────────────────────────────
+  death: "&#FF5555{player} &#606060(niv.&#FFB300{level}&#606060) &#FF5555est mort."
+
+  # ──────────────────────────────────────
+  # Level-up (raison : PLAYTIME)
+  # ──────────────────────────────────────
+  level-up:
+    # Message privé envoyé au joueur
+    # Placeholders : {level}, {old_level}
+    player: "&#55FF55\u25B2 F\u00e9licitations ! Vous \u00eates pass\u00e9 au niveau &#FFB300{level}&#55FF55 !"
+    # Annonce globale — laisser vide ("") pour d\u00e9sactiver
+    # Placeholders : {name}, {level}, {old_level}
+    broadcast: "&#606060[&#FFB300Niveaux&#606060] &#FFFFFF{name} &#606060vient d'atteindre le niveau &#FFB300{level}&#606060 !"
+
+  # ──────────────────────────────────────
+  # Reset \u00e0 la mort (raison : DEATH_RESET)
+  # ──────────────────────────────────────
+  death-reset:
+    # Placeholders : {old_level}
+    player: "&#FF5555\u2716 Vous avez perdu vos &#FFB300{old_level} &#FF5555niveau(x) suite \u00e0 votre mort."
+
+  # ──────────────────────────────────────
+  # Modifications administrateur
+  # ──────────────────────────────────────
+  admin-add:
+    # Placeholders : {amount}, {old_level}, {level}
+    player: "&#55FF55Un administrateur vous a ajout\u00e9 &#FFB300{amount} &#55FF55niveau(x). &#606060(&#FFB300{old_level} &#606060\u2192 &#FFB300{level}&#606060)"
+
+  admin-remove:
+    # Placeholders : {amount}, {old_level}, {level}
+    player: "&#FF5555Un administrateur vous a retir\u00e9 &#FFB300{amount} &#FF5555niveau(x). &#606060(&#FFB300{old_level} &#606060\u2192 &#FFB300{level}&#606060)"
+
+  admin-set:
+    # Placeholders : {old_level}, {level}
+    player: "&#FFFF55Un administrateur a d\u00e9fini votre niveau \u00e0 &#FFB300{level}&#FFFF55. &#606060(ancien : &#FFB300{old_level}&#606060)"
+
+  admin-reset:
+    # Placeholders : {old_level}
+    player: "&#FF5555Un administrateur a r\u00e9initialis\u00e9 votre niveau. &#606060(ancien : &#FFB300{old_level}&#606060)"
