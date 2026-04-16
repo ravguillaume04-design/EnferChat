@@ -1,6 +1,6 @@
 name: EnferChat
 version: 1.0.0
-main: fr.ravguillaume.enferchat.EnferChatPlugin
+main: enferplugins.enferchat.EnferChatPlugin
 api-version: 1.20
 description: Plugin de chat avec intégration du système de niveaux
 author: Saguime
