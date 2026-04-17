@@ -1,24 +1,23 @@
 package enferplugins.enferchat.hook;
 
-import enferplugins.niveaux.NiveauxPlugin;
-import enferplugins.niveaux.data.PlayerData;
+import enferplugins.enfercoeur.api.NiveauxProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 import java.util.UUID;
 
 public class NiveauxHook {
 
-    private final NiveauxPlugin niveauxPlugin;
+    private final NiveauxProvider provider;
 
     public NiveauxHook() {
-        this.niveauxPlugin = (NiveauxPlugin) Bukkit.getPluginManager().getPlugin("Niveaux");
+        Plugin plugin = Bukkit.getPluginManager().getPlugin("Niveaux");
+        this.provider = (plugin instanceof NiveauxProvider) ? (NiveauxProvider) plugin : null;
     }
 
     public int getLevel(UUID uuid) {
-        if (niveauxPlugin == null) return 0;
-        PlayerData data = niveauxPlugin.getPlayerCache().get(uuid);
-        return data != null ? data.getLevel() : 0;
+        return provider != null ? provider.getLevel(uuid) : 0;
     }
 
     public int getLevel(Player player) { return getLevel(player.getUniqueId()); }

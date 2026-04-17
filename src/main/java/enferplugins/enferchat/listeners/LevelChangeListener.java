@@ -2,7 +2,7 @@ package enferplugins.enferchat.listeners;
 
 import enferplugins.enferchat.EnferChatPlugin;
 import enferplugins.enferchat.util.ColorUtil;
-import enferplugins.niveaux.events.PlayerLevelChangeEvent;
+import enferplugins.enfercoeur.events.PlayerLevelChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

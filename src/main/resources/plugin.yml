@@ -4,5 +4,7 @@ main: enferplugins.enferchat.EnferChatPlugin
 api-version: 1.20
 description: Plugin de chat avec intégration du système de niveaux
 author: Saguime
+depend:
+  - EnferCoeur
 soft-depend:
   - Niveaux

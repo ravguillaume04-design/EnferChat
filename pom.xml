@@ -35,7 +35,7 @@
         </dependency>
         <dependency>
             <groupId>enferplugins</groupId>
-            <artifactId>niveaux</artifactId>
+            <artifactId>enfercoeur</artifactId>
             <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
