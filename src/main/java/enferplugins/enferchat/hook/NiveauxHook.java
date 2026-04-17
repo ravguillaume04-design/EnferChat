@@ -12,7 +12,7 @@ public class NiveauxHook {
     private final NiveauxPlugin niveauxPlugin;
 
     public NiveauxHook() {
-        this.niveauxPlugin = (NiveauxPlugin) Bukkit.getPluginManager().getPlugin("Niveaux");
+        this.niveauxPlugin = (NiveauxPlugin) Bukkit.getPluginManager().getPlugin("EnferNiveaux");
     }
 
     public int getLevel(UUID uuid) {
