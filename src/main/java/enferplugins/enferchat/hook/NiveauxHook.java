@@ -12,7 +12,7 @@ public class NiveauxHook {
     private final NiveauxProvider provider;
 
     public NiveauxHook() {
-        Plugin plugin = Bukkit.getPluginManager().getPlugin("Niveaux");
+        Plugin plugin = Bukkit.getPluginManager().getPlugin("EnferNiveaux");
         this.provider = (plugin instanceof NiveauxProvider) ? (NiveauxProvider) plugin : null;
     }
 

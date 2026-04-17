@@ -7,4 +7,4 @@ author: Saguime
 depend:
   - EnferCoeur
 soft-depend:
-  - Niveaux
+  - EnferNiveaux

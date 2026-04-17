@@ -14,11 +14,11 @@ public class EnferChatPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        if (Bukkit.getPluginManager().isPluginEnabled("Niveaux")) {
+        if (Bukkit.getPluginManager().isPluginEnabled("EnferNiveaux")) {
             niveauxHook = new NiveauxHook();
-            getLogger().info("Plugin Niveaux détecté — intégration des niveaux activée.");
+            getLogger().info("Plugin EnferNiveaux détecté — intégration des niveaux activée.");
         } else {
-            getLogger().info("Plugin Niveaux absent — intégration des niveaux désactivée.");
+            getLogger().info("Plugin EnferNiveaux absent — intégration des niveaux désactivée.");
         }
         Bukkit.getPluginManager().registerEvents(new ChatListener(this), this);
         Bukkit.getPluginManager().registerEvents(new DeathListener(this), this);
